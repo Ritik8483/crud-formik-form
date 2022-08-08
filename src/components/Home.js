@@ -85,7 +85,7 @@ const Home = () => {
         <Button variant="outlined" onClick={() => navigate("/adduser")}>
           Add user
         </Button>
-        <Button variant="outlined" onClick={() => setSortBtn(true)} >
+        <Button variant="outlined"  >
           sort data
         </Button>
         <form  className="d-flex align-items-center">
@@ -101,7 +101,7 @@ const Home = () => {
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
-            <TableRow>
+            <TableRow className="cursor-pointer" onClick={() => setSortBtn(!sortBtn)}>
               <TableCell>S.No.</TableCell>
               <TableCell align="right">UserName</TableCell>
               <TableCell align="right">Phone Number</TableCell>
